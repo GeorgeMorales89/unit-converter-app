@@ -1,0 +1,240 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "roboto", sans-serif;
+  background: #C9E3E4;
+}
+
+.unit-converter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+  padding: 0px;
+  border: 5px solid #C7D1C7;
+  border-radius: 20px
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-row-gap: 10px;
+  background: #6943FF;
+  color: #FFFFFF;
+  padding: 30px;
+  width: 500px;
+  border-radius: 15px 15px 0 0;
+
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 0 0 15px 15px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #FFFFFF;
+  color: #353535;
+  margin: 15px;
+  padding: 5px;
+  width: 500px;
+}
+
+input {
+  width: 115px;
+  height: 85px;
+  border: 2px solid #B295FF;
+  border-radius: 5px;
+  background-color: #6943FF;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 50px;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 25px;
+  
+}
+
+h3 {
+  color: #5A537B;
+  
+}
+
+button {
+    width: 110px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+}
+
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #48A9A6;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.sun svg {
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.moon svg {
+  fill: #73C0FC;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+/* .switch:hover */.sun svg {
+  -webkit-animation: rotate 15s linear infinite;
+          animation: rotate 15s linear infinite;
+}
+
+@-webkit-keyframes rotate {
+ 
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+ 
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/* .switch:hover */.moon svg {
+  -webkit-animation: tilt 5s linear infinite;
+          animation: tilt 5s linear infinite;
+}
+
+@-webkit-keyframes tilt {
+ 
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  25% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+
+  75% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes tilt {
+ 
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+
+  25% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+
+  75% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+.input:checked + .slider {
+  background-color: #183153;
+}
+
+.input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #183153;
+          box-shadow: 0 0 1px #183153;
+}
+
+.input:checked + .slider:before {
+  -webkit-transform: translateX(30px);
+      -ms-transform: translateX(30px);
+          transform: translateX(30px);
+}
