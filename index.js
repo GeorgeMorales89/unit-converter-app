@@ -35,7 +35,7 @@ convertBtn.addEventListener("click", () => {
 
 
   // Displaying length conversion results 
-  lengthEl.textContent = `${baseValue} meter = ${lengthFeet.toFixed(3)} feet | ${baseValue} feet = ${lengthMeter.toFixed(3)} meters`;
+  lengthEl.textContent = `${baseValue} meters = ${lengthFeet.toFixed(3)} feet | ${baseValue} feet = ${lengthMeter.toFixed(3)} meters`;
   volumeEl.textContent = `${baseValue} liters = ${volumeLiter.toFixed(3)} gallons | ${baseValue} gallons = ${volumeGallon.toFixed(3)} liters`;
   massEl.textContent = `${baseValue} kilos = ${massKilograms.toFixed(3)} pounds | ${baseValue} pounds = ${massPound.toFixed(3)} kilos`;
 });
